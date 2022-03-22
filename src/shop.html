@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/dist/custom.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon/favicon.png">
+    <title>Merairo</title>
+</head>
+<body>
+     <!--navbar-->
+     <header>
+      <nav
+         class="
+           flex flex-wrap
+           items-center
+           justify-between
+           w-full
+           py-4
+           md:py-0
+           px-4
+           text-lg text-gray-700
+           bg-white
+         "
+       >
+        <div class="logo-main">
+           <a href="#">
+             <h1 class="logo-main-text">Me<span class="logo-span">rairo</span></h1>
+           </a>
+         </div>
+        
+          <svg
+             xmlns="http://www.w3.org/2000/svg"
+             id="menu-button"
+             class="h-6 w-6 cursor-pointer md:hidden block"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+           >
+             <path
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               stroke-width="2"
+               d="M4 6h16M4 12h16M4 18h16"
+             />
+           </svg>
+           
+        <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+           <ul
+             class="
+             nav-list
+              "
+           >
+             <li class="nav-list-item ">
+               <a  href="index.html"
+                 >Home</a
+               >
+             </li>
+             <li class="nav-list-item ">
+               <a  href="shop.html"
+                 >Shop</a
+               >
+             </li>
+             <li class="nav-list-item ">
+               <a  href="about.html"
+                 >About</a
+               >
+             </li>
+             <li class="nav-list-item group">
+               <a  href="#"
+                 >Latest</a
+               >
+               <ul class="dropdown">
+                 <li class="dropdown-item" ><a href="shop.html" >product list</a></li>
+                 <li class="dropdown-item"><a href="product_details.html">product details</a></li>
+             </ul>
+             </li>
+             <li class="nav-list-item group">
+               <a  href="#"
+                 >Pages</a
+               >
+               <ul class="dropdown">
+                 <li class="dropdown-item" ><a href="login.html" >Login</a></li>
+                 <li class="dropdown-item"><a href="cart.html">Cart</a></li>
+                 <li class="dropdown-item"><a href="confirmation.html">Confirmation</a></li>
+             </ul>
+             </li>
+             <li class="nav-list-item ">
+               <a  href="contact.html"
+                 >Contact</a
+               >
+             </li>
+           </ul>
+         </div>
+         <div class="icon" id="menu-icon">
+             <ul  class="nav-icon">
+                 <li class=" nav-list-item-icon"><a href="#"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></a></li>
+                 <li class=" nav-list-item-icon"><a href="#"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></a></li>
+                 <li class=" nav-list-item-icon"><a href="#"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></a></li>
+             </ul>
+         </div>
+     </nav>
+   </header>
+
+<div class="bg-[url('/src/images/title_background/bg_main.png')] lg:p-24 lg:my-8">
+    <h1 class="text-gray-900 text-6xl font-extrabold font-josefin text-center my-11 uppercase">Watch Shop</h1>
+</div>
+
+
+<!--search by filter-->
+<div class="categories-filter">
+    <button class="btn-watch" data-watch-source="all">
+      All
+    </button>
+    <button class="btn-watch" data-watch-source="watch-1">
+    Sale
+    </button>
+    <button class="btn-watch" data-watch-source="watch-2">
+    New In
+    </button>
+     <button class="btn-watch" data-watch-source="watch-3">
+    Men
+    </button>
+     <button class="btn-watch" data-watch-source="watch-4">
+    Women
+    </button>
+  </div>
+
+  <!--Sale-->
+  <div class="portfolio-block" id="watch-1">
+    <div class="items" >
+      <div class="item">
+        <div class="flex items-center bg-indigo-100 lg:mx-12" style="font-family: 'Muli', sans-serif;">
+            <div class="container ml-auto mr-auto flex flex-wrap items-start">
+              <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
+                <h1 class="text-3xl lg:text-4xl text-gray-900 font-extrabold">
+                  On Sale
+                </h1>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/w1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Kelvin
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$350 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 17%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/w2.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Fiesta
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$150 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 87%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/w3.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Rolex
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$550 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 57%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/m1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Alberta
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$650 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 47%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/m2.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Keron
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$1150 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 25%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/w4.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Fanta
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$750 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 67%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/m3.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Robert
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$450 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 27%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/m4.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Watt
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$150 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 15%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/w5.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Bolier
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$76 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 7%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/m5.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Banson
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gentss</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$1150 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 37%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/w6.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Chakra
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$120 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 1%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/Sale/m6.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Alexa
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        <h3>$850 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 21%</span></h3>
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!--New In-->
+  <div class="portfolio-block" id="watch-2">
+    <div class="items">
+        <div class="item">
+          <div class="flex items-center bg-indigo-100 lg:mx-12" style="font-family: 'Muli', sans-serif;">
+              <div class="container ml-auto mr-auto flex flex-wrap items-start">
+                <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
+                  <h1 class="text-3xl lg:text-4xl text-gray-900 font-extrabold">
+                    New Arrival
+                  </h1>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/w1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Kelvin
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$350 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 17%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                    <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                      <figure class="mb-2">
+                        <img src="/src/images/shop/man/watch_1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                      </figure>
+                      <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                        <div>
+                          <h5 class="text-white text-2xl font-bold leading-none">
+                            Tissot
+                          </h5>
+                          <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                        </div>
+                        <div class="flex items-center">
+                          <div class="text-lg text-white font-light">
+                            $1099
+                          </div>
+                          <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                              <line x1="12" y1="5" x2="12" y2="19"></line>
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/w2.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Fiesta
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$150 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 87%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                    <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                      <figure class="mb-2">
+                        <img src="/src/images/shop/man/watch_3.jpg" alt="" class="h-64 ml-auto mr-auto " />
+                      </figure>
+                      <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                        <div>
+                          <h5 class="text-white text-2xl font-bold leading-none">
+                            Rolad
+                          </h5>
+                          <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                        </div>
+                        <div class="flex items-center">
+                          <div class="text-lg text-white font-light">
+                            $899
+                          </div>
+                          <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                              <line x1="12" y1="5" x2="12" y2="19"></line>
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/w3.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Rolex
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$550 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 57%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/m1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Alberta
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$650 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 47%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                    <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                      <figure class="mb-2">
+                        <img src="/src/images/shop/man/watch_5.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                      </figure>
+                      <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                        <div>
+                          <h5 class="text-white text-2xl font-bold leading-none">
+                            Sieko
+                          </h5>
+                          <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                        </div>
+                        <div class="flex items-center">
+                          <div class="text-lg text-white font-light">
+                            $299
+                          </div>
+                          <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                              <line x1="12" y1="5" x2="12" y2="19"></line>
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                    <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                      <figure class="mb-2">
+                        <img src="/src/images/shop/women/watch_1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                      </figure>
+                      <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                        <div>
+                          <h5 class="text-white text-2xl font-bold leading-none">
+                            Tissot
+                          </h5>
+                          <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> Ladies</span>
+                        </div>
+                        <div class="flex items-center">
+                          <div class="text-lg text-white font-light">
+                            $1099
+                          </div>
+                          <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                              <line x1="12" y1="5" x2="12" y2="19"></line>
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/m2.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Keron
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$1150 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 25%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                    <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                      <figure class="mb-2">
+                        <img src="/src/images/shop/women/watch_6.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                      </figure>
+                      <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                        <div>
+                          <h5 class="text-white text-2xl font-bold leading-none">
+                           Bonanza
+                          </h5>
+                          <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                        </div>
+                        <div class="flex items-center">
+                          <div class="text-lg text-white font-light">
+                            $599
+                          </div>
+                          <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                              <line x1="12" y1="5" x2="12" y2="19"></line>
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/w4.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Fanta
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$750 &nbsp; &nbsp;</h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/m3.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Robert
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$450 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 27%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/m4.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Watt
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$150 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 15%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/w5.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Bolier
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$76 &nbsp; &nbsp; <span class="text-rose-800"> &nbsp; Saving 7%</span></h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/m5.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Banson
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gentss</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$1150 &nbsp;</h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/w6.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Chakra
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$120 &nbsp;</h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                  <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                    <figure class="mb-2">
+                      <img src="/src/images/shop/Sale/m6.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                    </figure>
+                    <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                      <div>
+                        <h5 class="text-white text-2xl font-bold leading-none">
+                          Alexa
+                        </h5>
+                        <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                      </div>
+                      <div class="flex items-center">
+                        <div class="text-lg text-white font-light">
+                          <h3>$850 &nbsp;</h3>
+                        </div>
+                        <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <!--Men-->
+  <div class="portfolio-block" id="watch-3">
+    <div class="items">
+      <div class="item">
+        <div class="flex items-center bg-indigo-100 lg:mx-12" style="font-family: 'Muli', sans-serif;">
+            <div class="container ml-auto mr-auto flex flex-wrap items-start">
+              <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
+                <h1 class="text-3xl lg:text-4xl text-gray-900 font-extrabold">
+                  Watches for Men
+                </h1>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/man/watch_1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Tissot
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $1099
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/man/watch_2.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Banson
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $1299
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/man/watch_3.jpg" alt="" class="h-64 ml-auto mr-auto " />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Rolad
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $899
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/man/watch_4.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Citizen
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $399
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/man/watch_5.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Sieko
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Gents</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $299
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!--women-->
+  <div class="portfolio-block" id="watch-4">
+    <div class="items">
+      <div class="item">
+        <div class="flex items-center bg-indigo-100 lg:mx-12" style="font-family: 'Muli', sans-serif;">
+            <div class="container ml-auto mr-auto flex flex-wrap items-start">
+              <div class="w-full pl-5 lg:pl-2 mb-4 mt-4">
+                <h1 class="text-3xl lg:text-4xl text-gray-900 font-extrabold">
+                  Watches for Women
+                </h1>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_1.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Tissot
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $1099
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_2.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Kelvin
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $299
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_3.jpg" alt="" class="h-64 ml-auto mr-auto " />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Rolad
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $99
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_4.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Citizen
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $399
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_5.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                        Sieko
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $299
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_6.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                       Bonanza
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $599
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_7.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                       Versace
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $999
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 lg:w-1/4 pl-5 pr-5 mb-5 lg:pl-2 lg:pr-2">
+                <div class="bg-white rounded-lg m-h-64 p-2 transform hover:translate-y-2 hover:shadow-xl transition duration-300">
+                  <figure class="mb-2">
+                    <img src="/src/images/shop/women/watch_8.jpg" alt="" class="h-64 ml-auto mr-auto" />
+                  </figure>
+                  <div class="rounded-lg p-4 bg-gray-900 flex flex-col">
+                    <div>
+                      <h5 class="text-white text-2xl font-bold leading-none">
+                       Polard
+                      </h5>
+                      <span class="text-xs text-gray-400 leading-none">Chrono XL Classic <br> Stainless Steel <br> 	Ladies</span>
+                    </div>
+                    <div class="flex items-center">
+                      <div class="text-lg text-white font-light">
+                        $599
+                      </div>
+                      <button href="javascript:;" class="rounded-full bg-rose-800 text-white hover:bg-white hover:text-gray-900 hover:shadow-xl focus:outline-none w-10 h-10 flex ml-auto transition duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="stroke-current m-auto">
+                          <line x1="12" y1="5" x2="12" y2="19"></line>
+                          <line x1="5" y1="12" x2="19" y2="12"></line>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="btn-products-shop btn--animation-from-top">
+    <span class="btn__text-static">View More Products</span>
+    <div class="btn__text-dynamic">
+      <span class="btn__text-dynamic-inner">View More Products</span>
+    </div>
+  </button>
+
+
+  <!--Characteristics-->
+  <section>
+    <div class="grid grid-cols-1 font-josefin lg:grid-cols-3 gap-4 mx-8 mb-4 bg-rose-800 text-white p-6">
+      <div> <!--col 1-->
+        <i class="fa fa-dropbox fa-3x px-4"></i>
+          <h2 class="font-josefin font-bold text-2xl py-6 px-8">Free Shipping Method</h2>
+          <p class="px-8 text-lg">We believe that all of these factors combine to make The Watch Hut a truly premier</p>
+      </div>
+      <div> <!--col 1-->
+        <i class="fa fa-ship fa-3x px-4"></i>
+          <h2 class="font-josefin font-bold text-2xl py-6 px-8">Free Shipping Method</h2>
+          <p class="px-8 text-lg">We believe that all of these factors combine to make The Watch Hut a truly premier</p>
+      </div>
+      <div> <!--col 1-->
+        <i class="fa fa-stack-exchange fa-3x px-4"></i>
+          <h2 class="font-josefin font-bold text-2xl py-6 px-8">Free Shipping Method</h2>
+          <p class="px-8 text-lg">We believe that all of these factors combine to make The Watch Hut a truly premier</p>
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <section><!--Footer-->
+    <footer class="grid md:grid-cols-1 lg:grid-cols-4 bg-white  p-10 font-josefin">
+        <div class="mr-3">
+            <h1 class="text-gray-900 text-xl">Merairo</h1>
+            <p class="px-1 overflow-hidden">Founded in 1931, Louis Erard is an independent watch house based in Le Noirmont, a small village within the famous Jura region of Switzerland, the spiritual home of Swiss watchmaking. This cultural heritage becomes one with the watchmaker who is heir to the legacy he perpetuates; a love of craftsmanship in the finest Swiss tradition could well be Louis Erard’s motto. Or perhaps, quite simply, excellence.!</p>
+        </div>
+        <div class="lg:ml-20">
+            <h1 class="text-gray-900 text-xl">Categories</h1>
+            <ul class="text-gray-500 text-lg ">
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">Rubber made Toys</a></li>
+                <li class="transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">
+                  Mens Watches</a></li>
+                 <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800"><a href="#">
+                  Women Watches</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">Luxury Watches</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">
+                  Brands</a></li>
+                 <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">
+                        New In</a></li>
+                 
+            </ul>
+             
+        </div>
+        <div class="lg:ml-20">
+            <h1 class="text-gray-900 text-xl">Quick Links</h1>
+            <ul class="text-gray-500 text-lg">
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800  "><a href="#">About Us</a> </li>
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800  "> <a href="#">Offers & Discounts</a> </li>
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 ">  <a href="#">Get Coupon</a> </li>
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800  "> <a href="#">Contact Us</a></li>
+            </ul>  
+        </div>
+        <div>
+            <h1 class="text-gray-900 text-xl">Contact Us</h1>
+            <h2 class="text-gray-500 font-bold text-2xl tracking-widest">office: pakistan</h2>
+            <ul class="text-lg text-gray-500 pt-2">
+                <li class="leading-9  transition hover:ease-linear duration-500 hover:text-rose-800"><a href="maito:info@sample.com"><span><i class="fa fa-envelope pr-2"></i></span>info@sample.com</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800"> <a href="callto:068 (521) 763498"><span><i class="fa fa-phone pr-2"></i></span> 068 (521) 763498</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#"><span><i class="fa fa-location-arrow pr-2"></i></span> floor 09, xyz pakistan</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="lg:mt-8 lg:mb-6 flex lg:flex-wrap lg:flex-row justify-evenly md:flex-col">
+      <div class="w-6/12"><h4 class="lg:ml-8">Copyright ©2022 All rights reserved | This template is made with tailwind by <a href="https://www.linkedin.com/in/musfirah-h-9775b9156?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bk2AE6v5jQS%2B%2B1gVBQ5iUYw%3D%3D" class="text-rose-800">Musfirah</a></h4></div>
+      <div class="w-6/12 flex justify-end ">
+        <i class="fa fa-twitter px-4 cursor-pointer  hover:text-rose-800"></i>
+        <i class="fa fa-linkedin px-4 cursor-pointer  hover:text-rose-800"></i>
+        <i class="fa fa-github px-4 mr-3 cursor-pointer hover:text-rose-800"></i>
+      </div>
+    </div>
+    </section>
+
+
+<script src="/src/script.js"></script>
+</body>
+</html>

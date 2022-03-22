@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="/dist/custom.css">
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--jquery ajax-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--aos animation-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon/favicon.png">
+    
+
+    <title>Merairo</title>
+</head>
+<body>
+    <!--navbar-->
+    <header>
+      <nav
+         class="
+           flex flex-wrap
+           items-center
+           justify-between
+           w-full
+           py-4
+           md:py-0
+           px-4
+           text-lg text-gray-700
+           bg-white
+         "
+       >
+        <div class="logo-main">
+           <a href="#">
+             <h1 class="logo-main-text">Me<span class="logo-span">rairo</span></h1>
+           </a>
+         </div>
+        
+          <svg
+             xmlns="http://www.w3.org/2000/svg"
+             id="menu-button"
+             class="h-6 w-6 cursor-pointer md:hidden block"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+           >
+             <path
+               stroke-linecap="round"
+               stroke-linejoin="round"
+               stroke-width="2"
+               d="M4 6h16M4 12h16M4 18h16"
+             />
+           </svg>
+           
+        <div class="hidden w-full md:flex md:items-center md:w-auto" id="menu">
+           <ul
+             class="
+             nav-list
+              "
+           >
+             <li class="nav-list-item ">
+               <a  href="index.html"
+                 >Home</a
+               >
+             </li>
+             <li class="nav-list-item ">
+               <a  href="shop.html"
+                 >Shop</a
+               >
+             </li>
+             <li class="nav-list-item ">
+               <a  href="about.html"
+                 >About</a
+               >
+             </li>
+             <li class="nav-list-item group">
+               <a  href="#"
+                 >Latest</a
+               >
+               <ul class="dropdown">
+                 <li class="dropdown-item" ><a href="shop.html" >product list</a></li>
+                 <li class="dropdown-item"><a href="product_details.html">product details</a></li>
+             </ul>
+             </li>
+             <li class="nav-list-item group">
+               <a  href="#"
+                 >Pages</a
+               >
+               <ul class="dropdown">
+                 <li class="dropdown-item" ><a href="login.html" >Login</a></li>
+                 <li class="dropdown-item"><a href="cart.html">Cart</a></li>
+                 <li class="dropdown-item"><a href="confirmation.html">Confirmation</a></li>
+             </ul>
+             </li>
+             <li class="nav-list-item ">
+               <a  href="contact.html"
+                 >Contact</a
+               >
+             </li>
+           </ul>
+         </div>
+         <div class="icon" id="menu-icon">
+             <ul  class="nav-icon">
+                 <li class=" nav-list-item-icon"><a href="#"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></a></li>
+                 <li class=" nav-list-item-icon"><a href="#"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg></a></li>
+                 <li class=" nav-list-item-icon"><a href="#"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg></a></li>
+             </ul>
+         </div>
+     </nav>
+   </header>
+    <!--main section-->
+    <main>
+        <!--hero section-->
+        <div  class="hero-main">
+            <div class="hero-text-div" data-aos="fade-right">
+                <h1 class="hero-text-div-heading">Select Your New Perfect Style</h1>
+                <p class="hero-text-div-description">
+                    we are passionate about watches and this horological passion extends to the corporate culture at our headquarters in random places.
+                </p>
+                <button class="btn btn--animation-from-top">
+                    <span class="btn__text-static">Shop Now</span>
+                    <div class="btn__text-dynamic">
+                      <span class="btn__text-dynamic-inner">Shop Now</span>
+                    </div>
+                  </button>
+            </div>
+            <div class="hero-img-div" data-aos="fade-left"><!--image-->
+            <img  src="/src/images/hero/hero.png" alt="Image watch">
+            </div>
+        </div>
+
+        <!--New Arrivals Second Section-->
+        <h1 class="arrival-heading">new arrivals</h1>
+        <div class="underline-main"><!--underline-->
+            <div class="underline-main-inner"></div>
+          </div>
+       <div class="arrival-card-main">
+           <div class="arrival-card-inner" data-aos="flip-right" data-aos-easing="linear"
+           data-aos-duration="1500"><!--card 1-->
+               <div class="arrival-card-img">
+                   <img src="https://images.pexels.com/photos/9896951/pexels-photo-9896951.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="New Arrivals" class="arrival-card-img-inner">
+               </div>
+               <div class="arrival-card-text">
+                   <h2 class="arrival-card-text-inner-name">Rolad Dolar</h2>
+                   <h3 class="arrival-card-text-inner-price">$ 5679</h3>
+               </div>
+           </div>
+           <div class="arrival-card-inner" data-aos="flip-left" data-aos-easing="linear"
+           data-aos-duration="1500"><!--card 2-->
+               <div class="arrival-card-img">
+                   <img src="https://images.pexels.com/photos/364822/rolex-watch-time-luxury-364822.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="New Arrivals" class="arrival-card-img-inner">
+               </div>
+               <div class="arrival-card-text">
+                   <h2 class="arrival-card-text-inner-name">Alpina Apple</h2>
+                   <h3 class="arrival-card-text-inner-price">$ 9999</h3>
+               </div>
+           </div>
+           <div class="arrival-card-inner" data-aos="flip-right" data-aos-easing="linear"
+           data-aos-duration="1500"><!--card 3-->
+               <div class="arrival-card-img">
+                   <img src="https://images.pexels.com/photos/9897905/pexels-photo-9897905.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="New Arrivals" class="arrival-card-img-inner">
+               </div>
+               <div class="arrival-card-text">
+                   <h2 class="arrival-card-text-inner-name">Banson Johnson</h2>
+                   <h3 class="arrival-card-text-inner-price">$ 12455</h3>
+               </div>
+           </div>
+           <div class="arrival-card-inner" data-aos="flip-left" data-aos-easing="linear"
+           data-aos-duration="1500"><!--card 4-->
+               <div class="arrival-card-img">
+                   <img src="https://images.pexels.com/photos/3829441/pexels-photo-3829441.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="New Arrivals" class="arrival-card-img-inner">
+               </div>
+               <div class="arrival-card-text">
+                   <h2 class="arrival-card-text-inner-name">Timbart Supra</h2>
+                   <h3 class="arrival-card-text-inner-price">$ 3999</h3>
+               </div>
+           </div>
+       </div>
+       <!--arrival card grid-->
+       <div class="container mx-auto p-8" data-aos="fade-up-left">
+        <div class="flex flex-row flex-wrap mx-2">
+          <div class="w-full md:w-1/2 h-64 md:h-auto mb-4 px-2 overflow-hidden">
+            <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover transition hover:ease-out hover:duration-500 hover:scale-100 hover:grayscale " href="#" 
+             style="background-image: url(https://images.pexels.com/photos/10591429/pexels-photo-10591429.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
+            </a>
+          </div>
+          <div class="w-full md:w-1/2 mb-4 px-2">
+            <div class="flex flex-col sm:flex-row md:flex-col -mx-2">
+              <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 mb-4 sm:mb-0 md:mb-4 px-2">
+                <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover transition hover:ease-out hover:duration-500 hover:scale-100 hover:grayscale" href="#"  style="background-image: url(https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);"> 
+                </a>
+              </div>
+              <div class="w-full sm:w-1/2 md:w-full h-48 xl:h-64 px-2">
+                <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover transition hover:ease-out hover:duration-500 hover:scale-100 hover:grayscale" href="#"  style="background-image: url(https://images.pexels.com/photos/1010513/pexels-photo-1010513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="w-full sm:w-1/3 h-32 md:h-48 mb-4 sm:mb-0 px-2">
+            <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover transition hover:ease-out hover:duration-500 hover:scale-100 hover:grayscale" href="#"  style="background-image: url(https://images.pexels.com/photos/277460/pexels-photo-277460.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+            </a>
+          </div>
+          <div class="w-full sm:w-1/3 h-32 md:h-48 mb-4 sm:mb-0 px-2">
+            <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover transition hover:ease-out hover:duration-500 hover:scale-100 hover:grayscale" href="#"  style="background-image: url(https://images.pexels.com/photos/9898300/pexels-photo-9898300.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+            </a>
+          </div>
+          <div class="w-full sm:w-1/3 h-32 md:h-48 px-2">
+            <a class="block w-full h-full bg-grey-dark bg-no-repeat bg-center bg-cover transition hover:ease-out hover:duration-500 hover:scale-100 hover:grayscale" href="#"  style="background-image: url(https://images.pexels.com/photos/277319/pexels-photo-277319.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);">
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!--Popular Items-->
+      <h1 class="arrival-heading">Popular Items</h1>
+        <div class="underline-main"><!--underline-->
+            <div class="underline-main-inner"></div>
+          </div>
+<div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-1 items-center bg-gray-200 mt-12 mb-8 md:mx-4 ">
+<div class="wrapper w-auto my-5  mx-5  antialiased text-gray-900"> <!--card first-->
+  <div>
+      
+      <img src="https://images.pexels.com/photos/9898272/pexels-photo-9898272.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=" popular item" class="w-full h-64 object-cover object-center rounded-lg shadow-md">    
+      
+   <div class=" relative px-4 -mt-16 ">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span class="bg-rose-800 text-gray-900 text-lg px-3 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
+          New
+        </span>
+        <div class="ml-2 text-gray-900 uppercase text-xs font-semibold tracking-wider">
+          Movement: Miyota Caliber 9015.
+    </div>  
+      </div>
+      
+      <h4 class="mt-1 text-xl font-semibold uppercase leading-tight font-josefin truncate">Popular Item</h4>
+   
+    <div class="mt-1">
+      $18000
+    </div>
+    <div class="mt-4">
+      <span class="text-rose-800 text-md font-semibold">5/5 ratings </span>
+      <span class="text-sm text-gray-900">(based on 234 ratings)</span>
+    </div>  
+    </div>
+   </div>
+    
+  </div>
+    </div>
+<div class="wrapper w-auto  my-5 mx-5  antialiased text-gray-900"> <!--card second-->
+  <div>
+      
+      <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=" popular item" class="w-full h-64 object-cover object-center rounded-lg shadow-md">    
+      
+   <div class="relative px-4 -mt-16  ">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span class="bg-rose-800 text-gray-900 text-lg px-3 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
+          New
+        </span>
+        <div class="ml-2 text-gray-900 uppercase text-xs font-semibold tracking-wider">
+          Water proof to 50 meters
+    </div>  
+      </div>
+      
+      <h4 class="mt-1 text-xl font-semibold uppercase leading-tight font-josefin truncate">Popular Item</h4>
+   
+    <div class="mt-1">
+      $2800
+    </div>
+    <div class="mt-4">
+      <span class="text-rose-800 text-md font-semibold">3/5 ratings </span>
+      <span class="text-sm text-gray-900">(based on 164 ratings)</span>
+    </div>  
+    </div>
+   </div>
+    
+  </div>
+    </div>
+<div class="wrapper w-auto my-5 mx-5  antialiased text-gray-900"> <!--card third-->
+  <div>
+      
+      <img src="https://images.pexels.com/photos/9897836/pexels-photo-9897836.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=" popular item" class="w-full h-64 object-cover object-center rounded-lg shadow-md">    
+      
+   <div class="relative px-4 -mt-16  ">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span class="bg-rose-800 text-gray-900 text-lg px-3 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
+          New
+        </span>
+        <div class="ml-2 text-gray-900 uppercase text-xs font-semibold tracking-wider">
+          Power reserve 42+ hours
+    </div>  
+      </div>
+      
+      <h4 class="mt-1 text-xl font-semibold uppercase leading-tight font-josefin truncate">Popular Item</h4>
+   
+    <div class="mt-1">
+      $4500
+    </div>
+    <div class="mt-4">
+      <span class="text-rose-800 text-md font-semibold">4/5 ratings </span>
+      <span class="text-sm text-gray-900">(based on 834 ratings)</span>
+    </div>  
+    </div>
+   </div>
+    
+  </div>
+    </div>
+<div class="wrapper w-auto my-5  mx-5  antialiased text-gray-900"> <!--card fourth-->
+  <div>
+      
+      <img src="https://images.pexels.com/photos/128621/pexels-photo-128621.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=" popular item" class="w-full h-64 object-cover object-center rounded-lg shadow-md">    
+      
+   <div class="relative px-4 -mt-16  ">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span class="bg-rose-800 text-gray-900 text-lg px-3 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
+          New
+        </span>
+        <div class="ml-2 text-gray-900 uppercase text-xs font-semibold tracking-wider">
+          Screw down crown
+    </div>  
+      </div>
+      
+      <h4 class="mt-1 text-xl font-semibold uppercase leading-tight font-josefin truncate">Popular Item</h4>
+   
+    <div class="mt-1">
+      $18000
+    </div>
+    <div class="mt-4">
+      <span class="text-rose-800 text-md font-semibold">5/5 ratings </span>
+      <span class="text-sm text-gray-900">(based on 234 ratings)</span>
+    </div>  
+    </div>
+   </div>
+    
+  </div>
+    </div>
+<div class="wrapper w-auto my-5  mx-5  antialiased text-gray-900"> <!--card fifth-->
+  <div>
+      
+      <img src="https://images.pexels.com/photos/678248/pexels-photo-678248.png?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=" popular item" class="w-full h-64 object-cover object-center rounded-lg shadow-md">    
+      
+   <div class="relative px-4 -mt-16  ">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span class="bg-rose-800 text-gray-900 text-lg px-3 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
+          New
+        </span>
+        <div class="ml-2 text-gray-900 uppercase text-xs font-semibold tracking-wider">
+          28,800 Vib. Per hour
+    </div>  
+      </div>
+      
+      <h4 class="mt-1 text-xl font-semibold uppercase leading-tight font-josefin truncate">Popular Item</h4>
+   
+    <div class="mt-1">
+      $2800
+    </div>
+    <div class="mt-4">
+      <span class="text-rose-800 text-md font-semibold">3/5 ratings </span>
+      <span class="text-sm text-gray-900">(based on 164 ratings)</span>
+    </div>  
+    </div>
+   </div>
+    
+  </div>
+    </div>
+<div class="wrapper w-auto my-5 mx-5  antialiased text-gray-900"> <!--card sixth-->
+  <div>
+      
+      <img src="https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt=" popular item" class="w-full h-64 object-cover object-center rounded-lg shadow-md">    
+      
+   <div class="relative px-4 -mt-16  ">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <div class="flex items-baseline">
+        <span class="bg-rose-800 text-gray-900 text-lg px-3 py-1 inline-block rounded-full  uppercase font-semibold tracking-wide">
+          New
+        </span>
+        <div class="ml-2 text-gray-900 uppercase text-xs font-semibold tracking-wider">
+          leather for the RH and heritage series
+    </div>  
+      </div>
+      
+      <h4 class="mt-1 text-xl font-semibold uppercase leading-tight font-josefin truncate">Popular Item</h4>
+   
+    <div class="mt-1">
+      $4500
+    </div>
+    <div class="mt-4">
+      <span class="text-rose-800 text-md font-semibold">4/5 ratings </span>
+      <span class="text-sm text-gray-900">(based on 834 ratings)</span>
+    </div>  
+    </div>
+   </div>
+    
+  </div>
+    </div>
+  </div>
+  <div>
+    <button class="btn-products btn--animation-from-top">
+      <span class="btn__text-static">View More Products</span>
+      <div class="btn__text-dynamic">
+        <span class="btn__text-dynamic-inner">View More Products</span>
+      </div>
+    </button>
+  </div>
+  
+
+  <!--Watch of Choice-->
+  <section class="choice">
+    <div class="flex flex-wrap">
+        <div class="w-5/6 sm:w-1/2 p-6" data-aos="fade-right"> <!--description-->
+          <h2 class="choice-heading">Watch of Choice</h2>
+          <p class="choice-description">The Watch Hut is an established retailer of renowned Luxury, Fashion & Classic Watch Brands.
+            Established in 2005, our team have worked tirelessly over many years to curate a truly global range of Watches that are personally selected to both meet & exceed your ongoing needs & aspirations. We are proud to be a fully accredited partner of all the Brands we present on our site.</p>
+            <button class="btn btn--animation-from-top">
+              <span class="btn__text-static">Show Watches</span>
+              <div class="btn__text-dynamic">
+                <span class="btn__text-dynamic-inner">Show Watches</span>
+              </div>
+            </button>
+        </div>
+        <div class="w-full sm:w-1/2 p-6" data-aos="fade-left"><!--image-->
+            <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/xchoce_watch1.png.pagespeed.ic.5pBo4PQlTK.png" alt="">
+        </div>
+      </div>
+    <div class="flex flex-wrap  flex-col-reverse sm:flex-row">
+      <div class="w-full sm:w-1/2 p-6" data-aos="fade-right"><!--image-->
+        <img src="https://preview.colorlib.com/theme/timezone/assets/img/gallery/xchoce_watch2.png.pagespeed.ic.hnnjNtovY4.png" alt="">
+    </div>
+        <div class="w-5/6 sm:w-1/2 p-6" data-aos="fade-left"> <!--description-->
+          <h2 class="choice-heading">Watch of Choice</h2>
+          <p class="choice-description">The Watch Hut is an established retailer of renowned Luxury, Fashion & Classic Watch Brands.
+            Established in 2005, our team have worked tirelessly over many years to curate a truly global range of Watches that are personally selected to both meet & exceed your ongoing needs & aspirations. We are proud to be a fully accredited partner of all the Brands we present on our site.</p>
+            <button class="btn btn--animation-from-top">
+              <span class="btn__text-static">Show Watches</span>
+              <div class="btn__text-dynamic">
+                <span class="btn__text-dynamic-inner">Show Watches</span>
+              </div>
+            </button>
+        </div>
+      </div>
+  </section>
+
+  <!--Characteristics-->
+  <section>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-8 mb-4 bg-rose-800 text-white p-6">
+      <div> <!--col 1-->
+        <i class="fa fa-dropbox fa-3x px-4"></i>
+          <h2 class="font-josefin font-bold text-2xl py-6 px-8">Free Shipping Method</h2>
+          <p class="px-8 text-lg">We believe that all of these factors combine to make The Watch Hut a truly premier</p>
+      </div>
+      <div> <!--col 1-->
+        <i class="fa fa-ship fa-3x px-4"></i>
+          <h2 class="font-josefin font-bold text-2xl py-6 px-8">Free Shipping Method</h2>
+          <p class="px-8 text-lg">We believe that all of these factors combine to make The Watch Hut a truly premier</p>
+      </div>
+      <div> <!--col 1-->
+        <i class="fa fa-stack-exchange fa-3x px-4"></i>
+          <h2 class="font-josefin font-bold text-2xl py-6 px-8">Free Shipping Method</h2>
+          <p class="px-8 text-lg">We believe that all of these factors combine to make The Watch Hut a truly premier</p>
+      </div>
+    </div>
+  </section>
+
+  <!--footer-->
+  <section><!--Footer-->
+    <footer class="grid md:grid-cols-1 lg:grid-cols-4 bg-white  p-10 font-josefin">
+        <div class="mr-3">
+            <h1 class="text-gray-900 text-xl">Merairo</h1>
+            <p class="px-1 overflow-hidden">Founded in 1931, Louis Erard is an independent watch house based in Le Noirmont, a small village within the famous Jura region of Switzerland, the spiritual home of Swiss watchmaking. This cultural heritage becomes one with the watchmaker who is heir to the legacy he perpetuates; a love of craftsmanship in the finest Swiss tradition could well be Louis Erard’s motto. Or perhaps, quite simply, excellence.!</p>
+        </div>
+        <div class="lg:ml-20">
+            <h1 class="text-gray-900 text-xl">Categories</h1>
+            <ul class="text-gray-500 text-lg ">
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">Rubber made Toys</a></li>
+                <li class="transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">
+                  Mens Watches</a></li>
+                 <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800"><a href="#">
+                  Women Watches</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">Luxury Watches</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">
+                  Brands</a></li>
+                 <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#">
+                        New In</a></li>
+                 
+            </ul>
+             
+        </div>
+        <div class="lg:ml-20">
+            <h1 class="text-gray-900 text-xl">Quick Links</h1>
+            <ul class="text-gray-500 text-lg">
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800  "><a href="#">About Us</a> </li>
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800  "> <a href="#">Offers & Discounts</a> </li>
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 ">  <a href="#">Get Coupon</a> </li>
+                <li class=" leading-9 transition hover:ease-linear duration-500 hover:text-rose-800  "> <a href="#">Contact Us</a></li>
+            </ul>  
+        </div>
+        <div>
+            <h1 class="text-gray-900 text-xl">Contact Us</h1>
+            <h2 class="text-gray-500 font-bold text-2xl tracking-widest">office: pakistan</h2>
+            <ul class="text-lg text-gray-500 pt-2">
+                <li class="leading-9  transition hover:ease-linear duration-500 hover:text-rose-800"><a href="maito:info@sample.com"><span><i class="fa fa-envelope pr-2"></i></span>info@sample.com</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800"> <a href="callto:068 (521) 763498"><span><i class="fa fa-phone pr-2"></i></span> 068 (521) 763498</a></li>
+                <li class="leading-9 transition hover:ease-linear duration-500 hover:text-rose-800 "><a href="#"><span><i class="fa fa-location-arrow pr-2"></i></span> floor 09, xyz pakistan</a></li>
+            </ul>
+        </div>
+    </footer>
+    <div class="lg:mt-8 lg:mb-6 flex lg:flex-wrap lg:flex-row justify-evenly md:flex-col">
+      <div class="w-6/12"><h4 class="lg:ml-8">Copyright ©2022 All rights reserved | This template is made with tailwind by <a href="https://www.linkedin.com/in/musfirah-h-9775b9156?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bk2AE6v5jQS%2B%2B1gVBQ5iUYw%3D%3D" class="text-rose-800">Musfirah</a></h4></div>
+      <div class="w-6/12 flex justify-end ">
+        <i class="fa fa-twitter px-4 cursor-pointer  hover:text-rose-800"></i>
+        <i class="fa fa-linkedin px-4 cursor-pointer  hover:text-rose-800"></i>
+        <i class="fa fa-github px-4 mr-3 cursor-pointer hover:text-rose-800"></i>
+      </div>
+    </div>
+    </section>
+  
+       
+    </main>
+
+
+
+<script src="/src/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      AOS.init(
+        {
+          delay:200,
+          duration:1200,
+          once:false
+        }
+      )
+    </script>
+</body>
+</html>

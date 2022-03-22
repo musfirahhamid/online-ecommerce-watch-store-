@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav{
+    @apply mx-3 
+}
+.main-div{
+    @apply flex flex-row justify-between
+}
+.logo-main{
+    @apply my-4
+}
+.logo-main-text{
+    @apply text-gray-900 text-3xl font-extralight
+}
+.logo-span{
+    @apply text-red-800
+}
+.navbar-list{
+    @apply mx-6 my-6 hidden md:block
+}
+.nav-list{
+    @apply  pt-4
+    text-base text-gray-700
+    md:flex
+    md:justify-between 
+    md:pt-0
+}
+.nav-list-item{
+    @apply  md:p-4 py-2 block  font-josefin text-xl text-gray-900 hover:text-rose-800 transition hover:ease-linear hover:duration-500
+}
+.dropdown{
+    @apply   group-hover:block md:absolute sm:relative  hidden z-10 top-0 mt-2 md:mt-14  bg-gray-100 border-2 border-gray-200 transition hover:ease-linear hover:duration-500
+}
+.dropdown-item{
+   @apply   py-1 px-4 whitespace-nowrap border-t-2 rounded-lg border-gray-900 text-xl font-josefin text-gray-900 hover:text-rose-800 transition hover:ease-linear hover:duration-500 
+  
+}
+.icon{
+    @apply ml-6 my-6 hidden w-full md:flex md:items-center md:w-auto
+}
+.nav-icon{
+    @apply flex flex-row justify-center  text-2xl font-normal
+}
+.nav-list-item-icon{
+    @apply px-5 text-gray-900 hover:text-rose-800
+}
+
+.hero-main{
+    @apply flex md:flex-row flex-col   bg-gray-200
+}
+.hero-text-div{
+    @apply md:w-8/12
+}
+.hero-text-div-heading{
+    @apply text-gray-900 font-josefin font-extrabold lg:text-8xl md:text-6xl md:mt-10 text-4xl ml-8 mr-8 lg:mt-40 lg:ml-14  leading-snug
+}
+.hero-text-div-description{
+    @apply lg:ml-14 ml-8 mr-8 lg:mr-10 lg:mt-7 text-gray-900 text-xl 
+}
+.hero-img-div{
+    @apply md:w-4/12 mt-10
+}
+
+.arrival-heading{
+    @apply text-6xl text-gray-900 font-josefin font-semibold ml-4 mt-3 lg:ml-10 capitalize lg:mt-14
+}
+.underline-main{
+    @apply w-full mb-4
+}
+.underline-main-inner{
+    @apply h-1 ml-4 lg:ml-12 bg-rose-800 w-36  my-0 py-0 rounded-t
+}
+.arrival-card-main{
+    @apply grid lg:grid-cols-4 gap-4 md:grid-cols-2 sm:grid-cols-1 py-6 px-10
+}
+.arrival-card-inner{
+    @apply border-0 
+}
+.arrival-card-img{
+    @apply overflow-hidden
+}
+.arrival-card-img-inner{
+    @apply object-cover w-full h-64 bg-slate-600 transform hover:ease-linear duration-700 hover:scale-105
+}
+.arrival-card-text-inner-name{
+    @apply text-center text-2xl text-gray-900 py-3 font-josefin
+}
+.arrival-card-text-inner-price{
+    @apply text-rose-800 text-center text-xl pb-3 font-josefin
+}
+.choice{
+    @apply mt-8
+}
+.choice-heading{
+    @apply lg:mt-24 lg:ml-20 text-rose-800 text-5xl font-josefin font-bold uppercase
+}
+.choice-description{
+    @apply  lg:mt-12 lg:mx-20 text-gray-900 text-lg font-josefin
+}
