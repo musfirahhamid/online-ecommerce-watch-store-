@@ -5,6 +5,7 @@ Website Link
 https://merairo-ecommerce-watch-store.netlify.app/
 
 Description
+
 Merairo is the site canvas for nearly any type of eCommerce website. It is a fully equipped and features-packed
 template that covers the process of your site creation and makes establishing a page an easy task.
 
