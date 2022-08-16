@@ -1,5 +1,5 @@
 # watch(github)
- ecommerce store lansding page
+ ecommerce store landing page
  
 Website Link
 https://merairo-ecommerce-watch-store.netlify.app/
